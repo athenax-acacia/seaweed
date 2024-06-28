@@ -27,7 +27,7 @@ To do this, we run
 with the argument(s)
 
 `--order X0,X1,X2,X3` where `Xi` for $i = [0, 1, 2, 3]$ specifies the differentiation for the $i$-th variable in LPC,
-such that we have a moment of order $N = \sum_{i=0}^3 X_i$.
+such that we have a moment of order $N = \Sigma_{i=0}^{3} X_i$.
 
 *or*
 

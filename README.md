@@ -26,8 +26,8 @@ To do this, we run
 
 with the argument(s)
 
-`--order X0,X1,X2,X3` where `Xi` for $i = [0, 1, 2, 3]$ specifies the differentiation for the $i$-th variable in LPC,
-such that we have a moment of order $N = \Sigma_{i=0}^{3} X_i$.
+`--order X0,X1,X2,X3` where `Xi` for $i = [0, 1, 2, 3]$ specifies the differentiation for the $i$th variable in LPC,
+such that we have a moment of order $N = \sum_{i=0}^3 X_i$.
 
 *or*
 
@@ -64,7 +64,7 @@ iv. Generate all moments up to order 4 and write to the folder `pm_4` using all 
 
 `sage post-manoeuvre-moments.sage --num-parallel=0 -N 4 --output-folder pm_4`
 
-## Importing Moments
+## Calculating Moments
 For convenience, we have pre-generated moments up to order $N = 5$. These are stored in the `post_manoeuvre` module
 and are imported as so (assuming the conda environment is installed)
 ```
@@ -83,6 +83,22 @@ Sigma = np.array([[0.05, 0.002, 0.003, 0.002],
 # Substitute into fourth raw moment of scaled range rate
 post_manoeuvre.moment_0040(dv, mu, Sigma)
 ```
+
+## Displaying Moments
+We present the rendered third raw moment of bearing rate in LaTeX below.
+
+```
+# Import package
+from seaweed import post_manoeuvre
+
+# Print third raw moment of bearing rate
+post_manoeuvre.latex_0300()
+```
+
+There is a minor stylistic difference between the generated moments and the main body of [[2]](#2); the two components
+of ownship speed change, $\Delta v_x$ and $\Delta v_y$, are respectively written as $\Delta v_0$ and $\Delta v_1$. To produce the typeset equation below, we also manually adjusted line spacing and added alignment markers to fit the equation to the page.
+
+![](third_bearing_rate.png)
 
 ## Unit Testing
 The Python unit tests for the three SageMath scripts under the `sage` folder can be run with `pytest` and the following

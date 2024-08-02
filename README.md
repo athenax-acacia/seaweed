@@ -123,5 +123,5 @@ name of the corresponding script being tested.
 <a id="1">[1]</a> T. Brehard and J. R. Le Cadre. _Closed-form posterior Cramer-Rao bounds for bearings-only tracking_.
 *IEEE Transactions on Automatic Control*, 28 (3): 283-294, March 1983.
 
-<a id="2">[2]</a> A. H. Xiourouppa, D. Mikhin, M. Humphries and J. Maclean. _An insightful approach to bearings-only
-tracking in log-polar coordinates_.  [Preprint] 2024.
+<a id="2">[2]</a> A. H. Xiourouppa, D. Mikhin, M. Humphries and J. Maclean. _Theoretical Insights for Bearings-Only Tracking in Log-Polar Coordinates_.
+[Preprint] 2024.

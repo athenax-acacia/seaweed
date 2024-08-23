@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='seaweed',
 
-    version='1.0.0',
+    version='1.0.1',
 
     description='A package for generating and exporting moments of the target state distribution after an ownship manoeuvre',
 

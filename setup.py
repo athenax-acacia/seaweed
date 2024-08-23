@@ -38,7 +38,7 @@ setup(
         'sage',
     ],
 
-    packages=find_packages(where='seaweed'),
+    packages=find_packages(exclude=['tests']),
 
     python_requires='>=3.10',
 )

@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='seaweed',
 
-    version='1.0.1',
+    version='1.0.2',
 
     description='A package for generating and exporting moments of the target state distribution after an ownship manoeuvre',
 
@@ -32,11 +32,11 @@ setup(
 
     install_requires=[
         'numpy',
-        'pytest',
-        'qmcpy',
-        'yapf',
-        'sage',
     ],
+
+    extras_require={
+        'testing': ['pytest', 'qmcpy', 'yapf', 'sage'],
+    },
 
     packages=find_packages(exclude=['tests']),
 

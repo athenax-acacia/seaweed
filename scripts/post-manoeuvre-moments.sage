@@ -14,9 +14,16 @@ import sage.parallel.multiprocessing_sage as mps
 
 script = Path(__file__).stem
 
-project_root = Path(__file__).parents[1]
-sagedir = project_root/'sage'
-load_attach_path(str(sagedir))
+# This script can be executed in two modes:
+# * From the source tree of seaweed
+# * From the installed conda package of seaweed
+# Additionally, in the first case the seaweed (as Python package) could be either installed or used
+# in developer mode (i.e., from the source tree pointed to by conda.pth or a similar mechanism).
+# Therefore, we derive the .sage files to use from the location of the Python files of seaweed
+# currently in use.
+import seaweed as _seaweed
+_sage_path = Path(_seaweed.__path__[0]) / 'sage'
+load_attach_path(str(_sage_path))
 sage.repl.load.load('pmm.sage', globals())
 sage.repl.load.load('utils.sage', globals())
 
@@ -241,6 +248,8 @@ if __name__ == '__main__':
         print(f'{script}: command-line options:', file=sys.stderr)
         for arg in vars(args):
             print('    %s: %s' % (arg, getattr(args, arg)), file=sys.stderr)
+        print('', file=sys.stderr)
+        print(f'use Sage files from {_sage_path}', file=sys.stderr)
         print('', file=sys.stderr)
 
     ncpus = multiprocessing.cpu_count()

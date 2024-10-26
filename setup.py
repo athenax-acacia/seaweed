@@ -40,5 +40,7 @@ setup(
 
     packages=find_packages(exclude=['tests']),
 
+    package_data={'seaweed': ['sage/*.sage']},
+
     python_requires='>=3.10',
 )

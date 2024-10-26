@@ -40,6 +40,8 @@ setup(
 
     packages=find_packages(exclude=['tests']),
 
+    scripts=['scripts/post-manoeuvre-moments.sage'],
+
     package_data={'seaweed': ['sage/*.sage']},
 
     python_requires='>=3.10',

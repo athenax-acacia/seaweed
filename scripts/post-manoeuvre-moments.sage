@@ -1,3 +1,4 @@
+#!/usr/bin/env sage
 import argparse
 import functools
 import os

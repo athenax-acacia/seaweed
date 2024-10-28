@@ -107,15 +107,15 @@ optional flags:
 * `-v` - give some output while running.
 
 ## Directory
-* **`sage`**
-    * `mgf.sage` - Moment-generating function of a quadrivariate Gaussian distribution.
-    * `pmm.sage` - Derives the post-manoeuvre moments of the target state.
-    * `utils.sage` - Tools for the scripts above.
 * **`scripts`**
     * `post-manoeuvre-moments.sage` - The main script invoking all the calculations
 * **`seaweed`**
     * **`post_manoeuvre`** - Sample output of running the `post-manoeuvre-moments.sage` script for $N = 5$.
         * **`impl`** - Pre-exported moments.
+    * **`sage`**
+        * `mgf.sage` - Moment-generating function of a quadrivariate Gaussian distribution.
+        * `pmm.sage` - Derives the post-manoeuvre moments of the target state.
+        * `utils.sage` - Tools for the scripts above.
 * **`tests`** - Python unit tests for the SageMath scripts in `sage`, formatted as `test_<name>` where `<name>` is the
 name of the corresponding script being tested.
 
